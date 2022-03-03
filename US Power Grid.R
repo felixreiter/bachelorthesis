@@ -1,4 +1,3 @@
-#test
 # The following code installs and loads the needed extention
 load("igraph") 
 library("igraph")
