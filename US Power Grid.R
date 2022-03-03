@@ -40,3 +40,6 @@ V(powerNet)$name[degree(powerNet)==max(degree(powerNet))]
 NodeWithCurrentHighestDegree
 nwchd2
 
+
+
+
