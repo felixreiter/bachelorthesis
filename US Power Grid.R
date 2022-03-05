@@ -1,7 +1,6 @@
 # The following code installs and loads the needed extention
 load("igraph") 
 library("igraph")
-#library(tnet)
 
 # create a data frame of the network data
 powerNet <- read.table("http://opsahl.co.uk/tnet/datasets/USpowergrid_n4941.txt")
@@ -18,6 +17,7 @@ deg <- degree(powerNet)
 deg
 
 # the following code prints out the highest degree, of a node, within the network
+
 max(degree(powerNet))
 
 # This line prints out the name of the most central Node
