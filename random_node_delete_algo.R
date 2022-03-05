@@ -20,3 +20,4 @@ gorder(new_foo_g)
 
 max(degree(powerNet))
 max(degree(new_foo_g))
+
