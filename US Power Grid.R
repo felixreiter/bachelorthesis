@@ -9,8 +9,8 @@ powerNet <- read.table("http://opsahl.co.uk/tnet/datasets/USpowergrid_n4941.txt"
 powerNet <- graph.data.frame(powerNet)
 
 # Number of nodes in the network
-gorder(powerNet)
-
+order <- gorder(powerNet)
+order
 # now it is possible to calculate the degree of the nodes for further analysis
 
 deg <- degree(powerNet)
@@ -19,8 +19,9 @@ deg
 # the following code prints out the highest degree, of a node, within the network
 max(degree(powerNet))
 
-list_delete <- runif(n = 1000, min = 1, max = 4941)
-
+list_delete <- sample(1:order, 1000)
+new_powerNet <- delete.vertices(powerNet, list_delete)
+gorder(new_powerNet)
 
 
 
