@@ -13,7 +13,7 @@ order
 #list of random nodes that will be deleted
 list_delete <- sample(1:order, 1000)
 list_delete
-#delete the random nodes and save them in a new Dataframe 
+#delete the random nodes and save them in a new Data frame 
 
 new_foo_g <- delete.vertices(powerNet, list_delete)
 
