@@ -27,18 +27,7 @@ gorder(new_powerNet)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+###algorithm idea to delete the node with the highest degree###
 
 
 # This line prints out the name of the most central Node
