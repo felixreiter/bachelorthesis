@@ -17,8 +17,28 @@ deg <- degree(powerNet)
 deg
 
 # the following code prints out the highest degree, of a node, within the network
-
 max(degree(powerNet))
+
+list_delete <- runif(n = 1000, min = 1, max = 4941)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # This line prints out the name of the most central Node
 V(powerNet)$name[degree(powerNet)==max(degree(powerNet))]
