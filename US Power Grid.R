@@ -25,27 +25,28 @@ new_powerNet <- delete.vertices(powerNet, list_delete)
 gorder(new_powerNet)
 
 degcent <- centr_degree(powerNet, mode="all")
-max_degcent <- V(g)$name[degcent$res==max(degcent$res)]
+max_degcent <- V(powerNet)$name[degcent$res==max(degcent$res)]
 max_degcent
 
 evcent <- centr_eigen(powerNet)
-V(g)$name[evcent$res==max(evcent$res)]
+max_evcent <- V(powerNet)$name[evcent$res==max(evcent$res)]
+max_evcent
 
 katzcent <- alpha_centrality(powerNet, alpha=0.2)
-V(g)$name[katcent$res==max(katcent$res)]
-
+max_katcent <- V(powerNet)$name[katcent$res==max(katcent$res)]
+max_katzcent
 
 prcent <- page_rank(powerNet, directed=FALSE)
-V(g)$name[prcent$res==max(prcent$res)]
-
+max_prcent <- V(powerNet)$name[prcent$res==max(prcent$res)]
+max_prcent
 
 closecent <- centr_clo(powerNet)
-V(g)$name[closecent$res==max(closecent$res)]
-
+max_closecent <- V(powerNet)$name[closecent$res==max(closecent$res)]
+max_closecent
 
 betwcent <- centr_betw(powerNet, directed=FALSE)
-V(g)$name[betwcent$res==max(betwcent$res)]
-
+max_betwcent <- V(powerNet)$name[betwcent$res==max(betwcent$res)]
+max_betwcent
 
 # This line prints out the name of the most central Node
 V(powerNet)$name[degree(powerNet)==max(degree(powerNet))]
