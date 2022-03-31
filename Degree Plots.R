@@ -43,3 +43,7 @@ VS = 14 + 100*pagecent
 plot(g, vertex.size=VS)
 
 #plot closeness      
+closecent <- closeness(g)
+VS = 14 + 250*closecent
+plot(g, vertex.size=VS)
+
