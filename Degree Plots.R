@@ -21,6 +21,12 @@ VS = 6 + 5*degcent
 plot(g, vertex.size=VS)
 
 #plot betweennes
-betwcent <-betweenness(g)
+betwcent <- betweenness(g)
 VS = 14 + 5*betwcent
+plot(g, vertex.size=VS)
+
+#plot eigenvektor
+eigencent <-  eigen_centrality(g)$vector  
+eigencent
+VS = 14 + 10*eigencent
 plot(g, vertex.size=VS)
