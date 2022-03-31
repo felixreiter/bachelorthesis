@@ -53,7 +53,3 @@ V(powerNet)$name[degree(powerNet)==max(degree(powerNet))]
 # select the name of the node, which degree is equal to the highest degree within the network, and print it out
 
 
-
-
-
-

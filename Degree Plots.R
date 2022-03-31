@@ -30,3 +30,16 @@ eigencent <-  eigen_centrality(g)$vector
 eigencent
 VS = 14 + 10*eigencent
 plot(g, vertex.size=VS)
+
+#plot katz
+katcent <-  alpha_centrality(g, alpha=0.2)
+VS = 14 + 10*katcent
+plot(g, vertex.size=VS)
+
+#plot pagerank
+pagecent <- page_rank(g)$vector
+pagecent
+VS = 14 + 100*pagecent
+plot(g, vertex.size=VS)
+
+#plot closeness      
