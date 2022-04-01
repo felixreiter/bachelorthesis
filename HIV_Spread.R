@@ -70,10 +70,23 @@ for (i in 1:10){
   g5 <- delete_vertices(g5,V(g5)$name[prcent$vector==max(prcent$vector)])
 }
 gorder(g5)
+p
+  ##deletion of nodes with the highest closeness centrality##
+closecent <- centr_clo(g)
 
-#@MISC{konect:2018:hiv,
-#  title = {HIV network dataset -- {KONECT}},
- # month = feb,
- # year = {2018},
- # url = {http://konect.cc/networks/hiv}
-#}
+g6 <- HIV_net
+for (i in 1:10){
+  g6 <- delete_vertices(g6,V(g6)$name[closecent$res==max(closecent$res)])
+}
+plot(g6)
+V(g6)$name[closecent$res==max(closecent$res)]
+
+##deletion of nodes with the highest betweenness centrality##
+betwcent <- centr_betw(g, directed=TRUE)
+
+g7 <- HIV_net
+for (i in 1:10){
+  g7 <- delete_vertices(g7,V(g7)$name[betwcent$res==max(betwcent$res)])
+}
+plot(g7)
+V(g7)$name[betwcent$res==max(betwcent$res)]
