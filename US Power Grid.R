@@ -7,6 +7,8 @@ powerNet <- read.table("http://opsahl.co.uk/tnet/datasets/USpowergrid_n4941.txt"
 
 # create the network from the data frame
 powerNet <- graph.data.frame(powerNet)
+mean_distance(powerNet)
+mean_distance(new_powerNet)
 
 # Number of nodes in the network
 order <- gorder(powerNet)
@@ -51,5 +53,3 @@ max_betwcent
 # This line prints out the name of the most central Node
 V(powerNet)$name[degree(powerNet)==max(degree(powerNet))]
 # select the name of the node, which degree is equal to the highest degree within the network, and print it out
-
-
