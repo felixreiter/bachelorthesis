@@ -1,5 +1,6 @@
 #large network, power grid of the USA
 library("igraph")
+library("tnet")
 
 g <- read.table("http://opsahl.co.uk/tnet/datasets/USpowergrid_n4941.txt")
 
@@ -16,10 +17,8 @@ gorder(g)
 order <- gorder(g)
 n <- order * 0.01
 max(degree(g))
+mean(degree(g))
 gsize(g)
-#plot(g)
-max_flow(g,40,27)
-vertex_connectivity(g, 40, 38, checks = T)
 is_connected(g)
 components(g)
 mean_distance(g)
