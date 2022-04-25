@@ -1,7 +1,7 @@
 #large network, air traffic control
 library("igraph")
 
-g <- read.table("out.maayan-faa",sep = "", header= TRUE, fill = T)
+g <- read.table("out.maayan-faa",sep = "", header= TRUE, fill = TRUE)
 
 #@MISC{konect:2018:gene_fusion,
 #  title = {Gene fusion network dataset -- {KONECT}},
@@ -79,7 +79,6 @@ g4 <- g
 for (i in 1:n){
   g4 <- delete_vertices(g4,V(g4)$name[katzcent==max(katzcent)])
 }
-gorder(g4)
 V(g4)$name[katzcent==max(katzcent)]
 max(degree(g4))
 mean(degree(g4))
