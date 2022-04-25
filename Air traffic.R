@@ -10,7 +10,7 @@ g <- read.table("out.maayan-faa",sep = "", header= TRUE, fill = T)
 #  url = {http://konect.cc/networks/gene_fusion}
 #}
 
-g <- graph.data.frame(g, directed = TRUE, vertices = NULL)
+g <- graph.data.frame(g, directed = TRUE)
 gorder(g)
 order <- gorder(g)
 n <- order * 0.01
@@ -21,7 +21,8 @@ is_connected(g)
 components(g)
 mean_distance(g)
 diameter(g)
-##random deletion##
+
+  ##random deletion##
 
 #list of random nodes that will be deleted
 list_delete <- sample(1:order, n)
