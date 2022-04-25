@@ -125,7 +125,7 @@ diameter(g6)
 
   ##deletion of nodes with the highest betweeness centrality##
 
-betwcent <- centr_betw(g, directed=TRUE)
+betwcent <- centr_betw(g, directed=FALSE)
 
 g7 <- g
 for (i in 1:n){
