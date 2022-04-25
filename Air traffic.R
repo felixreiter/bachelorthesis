@@ -21,7 +21,7 @@ is_connected(g)
 components(g)
 mean_distance(g)
 diameter(g)
-
+any_(g)
   ##random deletion##
 
 #list of random nodes that will be deleted
