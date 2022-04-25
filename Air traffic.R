@@ -3,11 +3,11 @@ library("igraph")
 
 g <- read.table("out.maayan-faa",sep = "", header= TRUE, fill = TRUE)
 
-#@MISC{konect:2018:gene_fusion,
-#  title = {Gene fusion network dataset -- {KONECT}},
-#  month = feb,
-#  year = {2018},
-#  url = {http://konect.cc/networks/gene_fusion}
+#@MISC{konect:2017:maayan-faa,
+#  title = {Air traffic control network dataset -- {KONECT}},
+#  month = oct,
+ # year = {2017},
+  #url = {http://konect.cc/networks/maayan-faa}
 #}
 
 g <- graph.data.frame(g, directed = TRUE)
