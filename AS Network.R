@@ -1,3 +1,4 @@
+#large network, communication between autonomous systems
 library("igraph")
 
 g <- read.table("out.as20000102",sep = "", header= T, fill = TRUE)
@@ -10,7 +11,6 @@ g <- read.table("out.as20000102",sep = "", header= T, fill = TRUE)
 #}
 
 g <-graph_from_data_frame(g, directed = F)
-  #graph.data.frame(g, directed = F)
 gorder(g)
 order <- gorder(g)
 n <- order * 0.01
@@ -95,7 +95,6 @@ g5 <- g
 for (i in 1:n){
   g5 <- delete_vertices(g5,V(g5)$name[prcent$vector==max(prcent$vector)])
 }
-gorder(g5)
 max(degree(g5))
 mean(degree(g5))
 is_connected(g5)
