@@ -3,11 +3,11 @@ library("igraph")
 
 g <- read.table("out.as20000102",sep = "", header= T, fill = TRUE)
 
-#@MISC{konect:2018:gene_fusion,
-#  title = {Gene fusion network dataset -- {KONECT}},
-#  month = feb,
-#  year = {2018},
-#  url = {http://konect.cc/networks/gene_fusion}
+#@MISC{konect:2017:as20000102,
+ # title = {Route views network dataset -- {KONECT}},
+  #month = oct,
+  #year = {2017},
+  #url = {http://konect.cc/networks/as20000102}
 #}
 
 g <-graph_from_data_frame(g, directed = F)
@@ -55,7 +55,7 @@ components(g2)
 mean_distance(g2)
 diameter(g2)
 
-##deletion of nodes with the highest eigenvektor centrality##
+  ##deletion of nodes with the highest eigenvektor centrality##
 
 evcent <- centr_eigen(g)
 
@@ -71,7 +71,7 @@ components(g3)
 mean_distance(g3)
 diameter(g3)
 
-##deletion of nodes with the highest Katz centrality##
+  ##deletion of nodes with the highest Katz centrality##
 
 katzcent <- alpha_centrality(g, alpha=0.2)
 
@@ -87,7 +87,7 @@ components(g4)
 mean_distance(g4)
 diameter(g4)
 
-##deletion of nodes with the highest PageRank centrality##
+  ##deletion of nodes with the highest PageRank centrality##
 
 prcent <- page_rank(g, directed=F)
 
@@ -102,7 +102,7 @@ components(g5)
 mean_distance(g5)
 diameter(g5)
 
-##deletion of nodes with the highest closeness centrality##
+  ##deletion of nodes with the highest closeness centrality##
 
 closecent <- centr_clo(g)
 
@@ -118,7 +118,7 @@ components(g6)
 mean_distance(g6)
 diameter(g6)
 
-##deletion of nodes with the highest betweeness centrality##
+  ##deletion of nodes with the highest betweeness centrality##
 
 betwcent <- centr_betw(g, directed=F)
 
