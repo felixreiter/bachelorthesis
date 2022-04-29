@@ -23,7 +23,7 @@ mean_distance(g)
 diameter(g)
 mean(degree(g))
 
-##random deletion##
+  ##random deletion##
 
 #list of random nodes that will be deleted
 list_delete <- sample(1:order, 10)
@@ -39,7 +39,7 @@ mean_distance(random_delete)
 diameter(random_delete)
 mean(degree(random_delete))
 
-##deletion of nodes with the highest degree centrality##
+  ##deletion of nodes with the highest degree centrality##
 
 degcent <- centr_degree(g, mode="all")
 
@@ -57,7 +57,7 @@ mean_distance(g2)
 diameter(g2)
 mean(degree(g2))
 
-##deletion of nodes with the highest eigenvektor centrality##
+  ##deletion of nodes with the highest eigenvektor centrality##
 
 evcent <- centr_eigen(g)
 
@@ -74,7 +74,7 @@ mean_distance(g3)
 diameter(g3)
 mean(degree(g3))
 
-##deletion of nodes with the highest Katz centrality##
+  ##deletion of nodes with the highest Katz centrality##
 
 katzcent <- alpha_centrality(g, alpha=0.2)
 
@@ -92,7 +92,7 @@ mean_distance(g4)
 diameter(g4)
 mean(degree(g4))
 
-##deletion of nodes with the highest PageRank centrality##
+  ##deletion of nodes with the highest PageRank centrality##
 
 prcent <- page_rank(g, directed=FALSE)
 
@@ -109,7 +109,7 @@ mean_distance(g5)
 diameter(g5)
 mean(degree(g5))
 
-##deletion of nodes with the highest closeness centrality##
+  ##deletion of nodes with the highest closeness centrality##
 
 closecent <- centr_clo(g)
 
@@ -126,7 +126,7 @@ mean_distance(g6)
 diameter(g6)
 mean(degree(g6))
 
-##deletion of nodes with the highest betweenness centrality##
+  ##deletion of nodes with the highest betweenness centrality##
 
 betwcent <- centr_betw(g, directed=FALSE)
 
