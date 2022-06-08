@@ -6,8 +6,8 @@ g <- read.table("out.maayan-faa",sep = "", header= TRUE, fill = TRUE)
 #@MISC{konect:2017:maayan-faa,
 #  title = {Air traffic control network dataset -- {KONECT}},
 #  month = oct,
- # year = {2017},
-  #url = {http://konect.cc/networks/maayan-faa}
+# year = {2017},
+#url = {http://konect.cc/networks/maayan-faa}
 #}
 
 g <- graph.data.frame(g, directed = TRUE)
@@ -22,7 +22,7 @@ components(g)
 mean_distance(g)
 diameter(g)
 
-  ##random deletion##
+##random deletion##
 
 #list of random nodes that will be deleted
 list_delete <- sample(1:order, n)
